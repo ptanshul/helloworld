@@ -8,7 +8,9 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+variables:
+- group: app-grp
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: echo $(name)
+  
